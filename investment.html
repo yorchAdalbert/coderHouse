@@ -1,0 +1,30 @@
+<body>
+  <script>
+    //Investment App
+    let nombreUsuario = prompt("Nombre de usuario");
+
+    let edadUsuario = prompt("Edad");
+    let edadNum = parseInt(edadUsuario);
+
+    let inversion = prompt("Monto a invertir");
+    let inversionNum = parseInt(inversion);
+
+    if (edadNum >= 18) {
+      if (inversionNum >= 50_000) {
+        if (inversionNum <= 250_000)
+          alert("Usuario: " + nombreUsuario + "\nTipo de inversión: Standard");
+        if (inversionNum <= 750_000)
+          alert("Usuario: " + nombreUsuario + "\nTipo de inversión: Premium");
+        if (inversionNum <= 1_500_000) {
+          alert("Usuario: " + nombreUsuario + "\nTipo de inversión: Delux");
+        } else {
+          alert("Monto maximo de inversión $1500000");
+        }
+      } else {
+        alert("Monto minimo de inversión $50000");
+      }
+    } else {
+      alert("Eres muy joven para invertir!");
+    }
+  </script>
+</body>
