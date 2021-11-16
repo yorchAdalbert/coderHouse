@@ -1,9 +1,7 @@
 const alumnos = [];
 const alumnosCalificaciones = [];
 
-function registrarAlumnos (alumnos) {
-    let numeroAlumnos = prompt('Ingresa el numero de alumnos a registrar');
-    let numero = parseInt(numeroAlumnos);
+function registrarAlumnos (numero) {
 
     for (let i = 0; i < numero; i++) {
         let nombre = prompt('Nombre del alumno');
@@ -13,9 +11,7 @@ function registrarAlumnos (alumnos) {
     alert('Tu lista de alumnos esta completa');
 }
 
-const registrarCalificaciones = alumnosCalificaciones => {
-    let parciales = prompt('Ingrese el numero de parciales');
-    let numeroParciales = parseInt(parciales);
+const registrarCalificaciones = numeroParciales => {
 
     for (let i = 0; i < alumnos.length; i++) {
         let sumaCalificaciones = 0;
@@ -40,6 +36,16 @@ function mostrarCalificaciones() {
     
 }
 
-registrarAlumnos(alumnos);
-registrarCalificaciones(alumnosCalificaciones);
+// Obteniendo datos de los alumnos...
+let numeroAlumnos = prompt('Ingresa el numero de alumnos a registrar');
+let numero = parseInt(numeroAlumnos);
+
+registrarAlumnos(numero);
+
+// Obteniendo calificaciones de los alumnos...
+let parciales = prompt('Ingrese el numero de parciales');
+let numeroParciales = parseInt(parciales);
+
+registrarCalificaciones(numeroParciales);
+
 mostrarCalificaciones();
