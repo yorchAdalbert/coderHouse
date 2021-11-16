@@ -20,19 +20,26 @@ const registrarCalificaciones = alumnosCalificaciones => {
     for (let i = 0; i < alumnos.length; i++) {
         let sumaCalificaciones = 0;
 
-        for (let j = 0; j < numeroParciales; j++) {
-            let calificacion = prompt('Calificacion parcial: ' + j+1);
+        for (let j = 1; j <= numeroParciales; j++) {
+            let calificacion = prompt('Alumno: ' + alumnos[i] + '\nCalificacion parcial: ' + j);
             let numCalificacion = parseInt(calificacion);
             sumaCalificaciones += numCalificacion;
             
-            if (j === numeroParciales-1) 
+            if (j === numeroParciales) 
                 alumnosCalificaciones.push(sumaCalificaciones / numeroParciales);
-
         }
     }
     
-    alert('Las calificaciones estan listas');
+    alert('Las calificaciones esta listas');
+}
+
+function mostrarCalificaciones() {
+
+    for (let i = 0; i < alumnos.length; i++) 
+        alert('Alumno: ' + alumnos[i] + '\nCalificacion total de la materia: ' + alumnosCalificaciones[i].toFixed(1));
+    
 }
 
 registrarAlumnos(alumnos);
 registrarCalificaciones(alumnosCalificaciones);
+mostrarCalificaciones();
