@@ -9,6 +9,35 @@ class Auto {
         this.precio = 0;
     }
 
+    obteniendoSubmarca(submarca) {
+        if (submarca == 1)
+            this.submarca = '208';
+        if (submarca == 2)
+            this.submarca = '2008';
+        if (submarca == 3)
+            this.submarca = '3008';
+    }
+
+    obteniendoColor(color) {
+        if (color == 1)
+            this.color = 'negro';
+        if (color == 2)
+            this.color = 'blanco';
+        if (color == 3)
+            this.color = 'rojo';
+        if (color == 4)
+            this.color = 'plata';
+    }
+
+    obteniendoVersion(version) {
+        if (version == 1) 
+            this.version = 'standard';
+        if (version == 2)
+            this.version = 'equipado';
+        if (version == 3)
+            this.version = 'sport';
+    }
+
     numeroPuertas(version) {
         if (version != '3')
             this.puertas = 5;
@@ -57,6 +86,9 @@ let color = prompt('Eliga el color de su auto. \n 1 - negro \n 2 - blaco \n 3 - 
 
 let auto1 = new Auto(submarca, color, version);
 
+auto1.obteniendoSubmarca(submarca);
+auto1.obteniendoVersion(version);
+auto1.obteniendoColor(color);
 auto1.numeroPuertas(version);
 auto1.obteniendoPrecio(submarca, version);
 auto1.mostrarInformacion();
