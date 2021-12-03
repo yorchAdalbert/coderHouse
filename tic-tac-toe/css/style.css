@@ -1,5 +1,49 @@
-.body {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+#game-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+.grid {
+  display: grid;
+  width: 30%;
+  height: 50vh;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.box-left {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.box-center {
+  border-bottom: 2px solid black;
+}
+
+.box-right {
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.left-line {
+  border-right: 2px solid black;
+}
+
+.right-line {
+  border-left: 2px solid black;
+}
+
+.text-style {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1.5rem;
 }
