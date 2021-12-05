@@ -9,9 +9,16 @@ let box7 = document.getElementById('box-7');
 let box8 = document.getElementById('box-8');
 let box9 = document.getElementById('box-9');
 
+let turno = 'jugador';
 
 function llenandoCasilla(e) {
-    e.target.innerHTML = 'X';
+    if (turno === 'jugador') {
+        e.target.innerHTML = 'X';
+        turno = 'computadora';
+    } else {
+        e.target.innerHTML = 'O';
+        turno = 'jugador';
+    }
 }
 
 function posicionJugar(e) {
