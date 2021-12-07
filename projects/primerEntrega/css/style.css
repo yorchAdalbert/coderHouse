@@ -16,3 +16,11 @@ a {
   text-decoration: none;
   color: black;
 }
+
+#personajes {
+  display: flex;
+}
+
+div {
+  margin: 1rem;
+}
