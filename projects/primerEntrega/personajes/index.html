@@ -13,8 +13,11 @@
       <form action="">
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" /><br />
-        <label for="genero">Genero</label>
-        <input type="radio" id="genero" name="personaje" /><br />
+        <p>Genero</p>
+        <input type="radio" id="genero" name="personaje" value="hombre" />
+        <label for="genero">Hombre</label><br />
+        <input type="radio" id="genero" name="personaje" value="mujer" />
+        <label for="genero">Mujer</label><br />
         <label for="peso">Peso</label>
         <input
           type="range"
@@ -31,15 +34,16 @@
           name="personaje"
           min="0.50"
           max="2"
-          step="0.5"
+          step="0.1"
         /><br />
         <label for="tipo">Tipo</label>
         <select name="personaje" id="tipo">
           <option value="tirra">Tierra</option>
           <option value="fuego">Fuego</option>
           <option value="agua">Agua</option>
-          <option value="viento">Viento</option>
-        </select>
+          <option value="viento">Viento</option></select
+        ><br />
+        <input type="submit" value="Crear" />
       </form>
     </div>
   </body>

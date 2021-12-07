@@ -20,46 +20,14 @@ class Personaje {
     }
 }
 
-function menu() {
-    let opcion = prompt('1 - Crear NPC' +
-                      '\n2 - Ver informacion' +
-                      '\n3 - Salir');
+let nombre = document.getElementById('nombre');
+let genero = document.getElementById('genero');
+let peso = document.getElementById('peso');
+let estatura = document.getElementById('estatura');
+let tipo = document.getElementById('tipo');
 
-    return opcion;
-}
+const npc1 = new Personaje('Jorge', 'hombre', '70', '1.7', 'fuego');
+const npc2 = new Personaje('Alan', 'hombre', '50', '0.50', 'viento');
+const npc3 = new Personaje('Bere', 'mujer', '60', '1.6', 'tierra');
 
-const personajes = [];
-let opcion = '';
-
-alert('Creador de NPC');
-
-while(opcion != '3' && opcion != null) {
-    opcion = menu();
-
-    switch(opcion) {
-        case '1' :
-            let nombre = prompt('Nombre del personaje');
-            let genero = prompt('Genero del personaje');
-            let peso = prompt('Peso del personaje');
-            let estatura = prompt('Estatura del personaje');
-            let tipo = prompt('Eligue un elemento natural para el tipo de tu guerrero');
-
-            let personaje = new Personaje(nombre, genero, peso, estatura, tipo);
-            personaje.saludar();
-            personajes.push(personaje);
-            alert('Personaje guardado!');
-            break;
-        case '2' :
-            if (personajes.length === 0) {
-                alert('No tienes ningun personaje guardado...')
-            } else {
-                for (let i = 0; i < personajes.length; i++) 
-                    personajes[i].mostrarInfo();
-            }
-            break;
-        default :
-            alert('Opcion no reconocida...');
-    }
-}
-
-alert('Gracias por usar el software!');
+const personajes = [npc1, npc2, npc3];
