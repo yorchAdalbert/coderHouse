@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear personaje</title>
+  </head>
+  <body>
+    <div class="datos">
+      <form action="">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" /><br />
+        <label for="genero">Genero</label>
+        <input type="radio" id="genero" name="personaje" /><br />
+        <label for="peso">Peso</label>
+        <input
+          type="range"
+          id="peso"
+          name="personaje"
+          min="30"
+          max="120"
+          step="5"
+        /><br />
+        <label for="estatura">Estatura</label>
+        <input
+          type="range"
+          id="estatura"
+          name="personaje"
+          min="0.50"
+          max="2"
+          step="0.5"
+        /><br />
+        <label for="tipo">Tipo</label>
+        <select name="personaje" id="tipo">
+          <option value="tirra">Tierra</option>
+          <option value="fuego">Fuego</option>
+          <option value="agua">Agua</option>
+          <option value="viento">Viento</option>
+        </select>
+      </form>
+    </div>
+  </body>
+</html>
