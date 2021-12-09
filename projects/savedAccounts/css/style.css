@@ -13,8 +13,8 @@
 }
 
 .title {
-  font-size: 3rem;
-  padding-bottom: 10rem;
+  font-size: 5rem;
+  padding-bottom: 2rem;
 }
 
 .button {
@@ -26,4 +26,10 @@
   border-radius: 5px;
   text-align: center;
   font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.crear-cuenta {
+  display: flex;
+  justify-content: space-between;
 }
