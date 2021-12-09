@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-title {
+  font-size: 3rem;
+  padding-bottom: 10rem;
+}
+
+.button {
+  width: 15%;
+  background-color: blueviolet;
+  color: white;
+  height: 5vh;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+}
